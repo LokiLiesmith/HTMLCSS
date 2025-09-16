@@ -1,0 +1,75 @@
+body {
+	font-family: Arial, sans-serif;
+	background: #f7f7f7;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+table.profile-card {
+	width: 300px;
+	border-collapse: collapse;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+	background: white;
+	text-align: center;
+	overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.name {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px 0;
+}
+
+.role {
+	color: gray;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+.school {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.social-icons {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.social-icons a {
+	margin: 0 5px;
+	text-decoration: none;
+	color: black;
+}
+
+.social-icon-img {
+  display: flex;
+  justify-content: center;    
+  gap: 10px;                  
+}
+
+.social-icon-img img {
+  width: 30px;       
+  height: 30px;
+  object-fit: contain;     
+  display: inline-block;
+}
+
+.contact {
+	background: black;
+	color: white;
+	font-weight: bold;
+	padding: 12px;
+}
