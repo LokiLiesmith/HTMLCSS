@@ -4,15 +4,239 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rush</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
   <body>
-    <a href="cheatsheet.html"> CheatSheet</a>
-	<a href="mark.html">Mark</a>
-	<a href="sergei.html">Sergei</a>
-	<h1>Index.html</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  	<script src="app.js"></script>
-</body>
+    <!-- Navbar -->
+    <section>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" class="rounded float-start" id="nav-logo">
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-target="#cvCarousel" data-bs-slide-to="1">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-target="#cvCarousel" data-bs-slide-to="0">Mark</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-target="#cvCarousel" data-bs-slide-to="2">Sergei</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+    </section>
+
+    <!-- Carousel -->
+    <section class="carousel-container">
+      <div id="cvCarousel" class="carousel slide" data-bs-ride="false" data-bs-wrap="false">
+        <div class="carousel-inner">
+
+<!-- Slide 1: Mark -->
+<div class="carousel-item">
+	<div class="container py-5">
+	  <!-- Part 1: Profile -->
+	  <div class="row mb-4">
+		<div class="col-md-3">
+		  <img src="https://cdn.zmescience.com/wp-content/uploads/2013/10/fennec-fox.jpg"
+			   class="rounded-circle"
+			   style="width: 150px; height: 150px; object-fit: cover;"
+			   alt="Mark Photo">
+		</div>
+		<div class="col-md-9 d-flex flex-column justify-content-center">
+		  <h2 class="mb-1">Mark Ražem</h2>
+		  <h5 class="text-muted">Full-Stack Web Developer</h5>
+		</div>
+	  </div>
+  
+	  <!-- Part 2: Experience & Skills -->
+	  <div class="row mb-4">
+		<div class="col-md-6">
+		  <h4>Professional Experience</h4>
+		  <ul>
+			<li><strong>Web Developer</strong> at XYZ Corp (2022–2024)<br>
+			  <small>Developed responsive websites with modern JavaScript frameworks.</small>
+			</li>
+			<li><strong>Intern</strong> at ABC Studio (2021)<br>
+			  <small>Assisted in front-end bug fixes and UI design improvements.</small>
+			</li>
+		  </ul>
+		</div>
+		<div class="col-md-6">
+		  <h4>Skills</h4>
+		  <ul>
+			<li>HTML, CSS, JavaScript (ES6+)</li>
+			<li>React & Node.js</li>
+			<li>Bootstrap, Tailwind</li>
+			<li>Git & GitHub workflows</li>
+		  </ul>
+		</div>
+	  </div>
+  
+	  <!-- Part 3: Contact -->
+	  <div>
+		<h4>Contact</h4>
+		<p>Email: <a href="mailto:mark@example.com">mark@example.com</a></p>
+		<p>LinkedIn: <a href="#">linkedin.com/in/mark</a></p>
+		<p>GitHub: <a href="#">github.com/mark</a></p>
+	  </div>
+	</div>
+  </div>
+		
+
+          <!-- Slide 2: Welcome (active) -->
+          <div class="carousel-item active position-relative">
+            <div class="d-flex flex-lg-row flex-column vh-100 w-100 align-items-center justify-content-center">
+
+              <!-- Left Half -->
+              <div class="flex-fill d-flex align-items-center justify-content-center p-3">
+                <div class="card text-center" style="max-width: 300px; width: 100%;">
+                  <img src="https://cdn.zmescience.com/wp-content/uploads/2013/10/fennec-fox.jpg"
+                       class="card-img-top rounded-circle mx-auto d-block mt-3"
+                       style="width: 150px; height: 150px; object-fit: cover;"
+                       alt="Mark preview">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fs-4 pt-4">Mark’s CV</h5>
+                    <p class="card-text flex-grow-1">
+                      Click here to explore Mark’s experience and skills.
+                    </p>
+                    <!-- Arrow -->
+                    <div class="mt-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                           class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Half -->
+              <div class="flex-fill d-flex align-items-center justify-content-center p-3">
+                <div class="card text-center" style="max-width: 300px; width: 100%;">
+                  <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80&w=2770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                       class="card-img-top rounded-circle mx-auto d-block mt-3"
+                       style="width: 150px; height: 150px; object-fit: cover;"
+                       alt="Sergei preview">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fs-4 pt-4">Sergei’s CV</h5>
+                    <p class="card-text flex-grow-1">
+                      Click here to explore Sergei’s experience and skills.
+                    </p>
+                    <!-- Arrow -->
+                    <div class="mt-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                           class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overlay logo in center -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg"
+                 class="position-absolute top-50 start-50 translate-middle"
+                 id="carousel-logo">
+
+            <div class="text-center mt-4">
+              <h1>Welcome</h1>
+              <p>Choose whose CV you want to view:</p>
+              <p class="text-muted">Click left for Mark, right for Sergei</p>
+            </div>
+          </div>
+
+		<!-- Slide 3: Sergei -->
+<div class="carousel-item">
+	<div class="container py-5">
+	  <!-- Part 1: Profile -->
+	  <div class="row mb-4">
+		<div class="col-md-3">
+		  <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?q=80"
+			   class="rounded-circle"
+			   style="width: 150px; height: 150px; object-fit: cover;"
+			   alt="Sergei Photo">
+		</div>
+		<div class="col-md-9 d-flex flex-column justify-content-center">
+		  <h2 class="mb-1">Sergei Komyshev</h2>
+		  <h5 class="text-muted">Systems Engineer</h5>
+		</div>
+	  </div>
+  
+	  <!-- Part 2: Experience & Skills -->
+	  <div class="row mb-4">
+		<div class="col-md-6">
+		  <h4>Professional Experience</h4>
+		  <ul>
+			<li><strong>Systems Engineer</strong> at ABC Corp (2020–2024)<br>
+			  <small>Managed Linux servers, optimized CI/CD pipelines, improved system security.</small>
+			</li>
+			<li><strong>DevOps Intern</strong> at TechLab (2019)<br>
+			  <small>Deployed microservices with Docker and Kubernetes.</small>
+			</li>
+		  </ul>
+		</div>
+		<div class="col-md-6">
+		  <h4>Skills</h4>
+		  <ul>
+			<li>Linux, Shell scripting</li>
+			<li>C programming, Networking</li>
+			<li>Docker & Kubernetes</li>
+			<li>CI/CD pipelines (Jenkins, GitLab CI)</li>
+		  </ul>
+		</div>
+	  </div>
+  
+	  <!-- Part 3: Contact -->
+	  <div>
+		<h4>Contact</h4>
+		<p>Email: <a href="mailto:sergei@example.com">sergei@example.com</a></p>
+		<p>LinkedIn: <a href="#">linkedin.com/in/sergei</a></p>
+		<p>GitHub: <a href="#">github.com/sergei</a></p>
+	  </div>
+	</div>
+  </div>
+	
+			</div>
+
+        </div>
+
+        <!-- Invisible Controls (still functional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#cvCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cvCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <div class="container d-flex justify-content-between align-items-center h-100">
+        <span class="text-muted">© 2025 Rush Project</span>
+        <div>
+          <a href="#" class="text-muted me-3">Privacy</a>
+          <a href="#" class="text-muted me-3">Terms</a>
+          <a href="#" class="text-muted">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>

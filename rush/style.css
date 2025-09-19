@@ -3,17 +3,121 @@ body {
   background-color: #f8f9fa;
 }
 
-section {
-  margin-bottom: 4rem;
+#nav-logo {
+  min-height: 50px;
 }
 
-h2 {
-  margin: 2rem 0 1rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
+/* Make carousel full screen */
+.carousel-item {
+  width: 100vw;
+  height: 100vh;
 }
-.wrapper-123 {
-  width: 600px;
-  height: 700px;
-  background-color: aquamarine;
+
+/* Hide arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+/* Invisible full-screen halves */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50%;
+  opacity: 0;
+  z-index: 10;
+  transition: background 0.4s ease;
+}
+
+/* Hover gradient */
+.carousel-control-prev:hover {
+  background: linear-gradient(to right, rgba(0,0,0,0.10), rgba(0,0,0,0));
+}
+.carousel-control-next:hover {
+  background: linear-gradient(to left, rgba(0,0,0,0.10), rgba(0,0,0,0));
+}
+
+/* Disabled sides (no clicks, no hover gradient)
+.carousel-control-prev[aria-disabled="true"],
+.carousel-control-next[aria-disabled="true"] {
+  pointer-events: none;
+  background: none !important;
+} */
+
+/* Disabled sides (no clicks, no hover gradient) */
+.carousel-control-prev.at-edge,
+.carousel-control-next.at-edge {
+  pointer-events: none;
+  background: none !important;
+}
+
+
+.left-half {
+  /* background-color: #1a1a40; deep navy */
+  color: gray
+}
+
+.right-half {
+  /* background-color: #2ecc71; custom green */
+  color: gray
+}
+
+#carousel-logo {
+  height: 20vh;
+  width: auto;
+  margin: 0 40px; /* space on left/right between logo and cards */
+}
+
+
+
+.card {
+  min-height: 350px; /* keeps cards equal if content differs */
+  height: fit-content;
+  color: black;
+  border-color: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  border: 4px solid #fff; /* adds a nice white border to the circle */
+}
+
+
+html, body {
+  height: 100%;             /* full viewport height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;   /* stack navbar, carousel, footer */
+}
+
+.carousel-container {
+  flex: 1;                  /* take remaining space */
+  min-height: 0;            /* avoid overflow */
+}
+
+footer {
+  flex: 0 0 5vh;            /* always 5% of viewport height */
+}
+
+
+/* Navbar always on top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050; /* higher than carousel */
+}
+
+/* Footer always on bottom */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+}
+
+/* Reserve space so content doesn’t hide behind nav/footer */
+body {
+  padding-top: 70px;   /* adjust to navbar height */
+  padding-bottom: 50px; /* adjust to footer height */
 }
